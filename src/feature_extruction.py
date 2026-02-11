@@ -7,7 +7,7 @@ def add_text_features(df):
     df['exclamation_count'] = df['text'].apply(lambda x : x.count('!'))
     return df
 
-def tfidif_features(train_text, test_text):
+def tfidf_features(train_text, test_text):
     tfidf = TfidfVectorizer(
         max_features=20000,
         ngram_range=(1,2),
